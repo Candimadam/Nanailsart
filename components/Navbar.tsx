@@ -87,29 +87,29 @@ export function Navbar() {
         <button
           id="mobile-menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
-          className="relative z-[110] flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="relative z-[110] flex h-10 w-10 items-center justify-center md:hidden"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
           <span
-            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "translate-y-1.25 rotate-45" : ""
+            className={`absolute h-0.5 w-6 rounded-full bg-foreground transition-transform duration-300 ${isOpen ? "rotate-45" : "-translate-y-2"
               }`}
           />
           <span
-            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "opacity-0" : ""
+            className={`absolute h-0.5 w-6 rounded-full bg-foreground transition-opacity duration-300 ${isOpen ? "opacity-0" : "opacity-100"
               }`}
           />
           <span
-            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "-translate-y-1.25 -rotate-45" : ""
+            className={`absolute h-0.5 w-6 rounded-full bg-foreground transition-transform duration-300 ${isOpen ? "-rotate-45" : "translate-y-2"
               }`}
           />
         </button>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Dropdown */}
         <div
-          className={`fixed inset-0 z-[100] flex min-h-dvh flex-col items-center justify-center gap-8 overflow-y-auto bg-[#fdf8f5] transition-all duration-500 md:hidden ${isOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+          className={`absolute left-0 right-0 top-full z-[90] flex max-h-[calc(100dvh-5rem)] flex-col items-center gap-7 overflow-y-auto border-t border-[#f0e4da]/60 bg-[#fdf8f5] px-5 py-8 shadow-xl transition-all duration-300 md:hidden ${isOpen
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
             }`}
         >
           {navLinks.map((link, index) => (

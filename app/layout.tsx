@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Nanails Art — Salon Nail Art Premium",
   description:
-    "Percantik kuku Anda dengan perawatan premium dan nail art eksklusif di Nanails Art. Manicure, gel polish, nail extension, dan nail art design terbaik di Majalaya.",
+    "Percantik kuku Anda dengan perawatan premium dan nail art eksklusif dengan design terbaik di Majalaya.",
   icons: {
     icon: "/images/logo.png",
   },
