@@ -17,20 +17,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Nanails Art — Salon Nail Art Premium",
   description:
-    "Percantik kuku Anda dengan perawatan premium dan nail art eksklusif di Nanails Art. Manicure, gel polish, nail extension, dan nail art design terbaik di Jakarta.",
-  keywords: [
-    "nail art",
-    "salon kuku",
-    "manicure jakarta",
-    "gel polish",
-    "nail extension",
-    "nanails art",
-  ],
-  openGraph: {
-    title: "Nanails Art — Salon Nail Art Premium",
-    description:
-      "Percantik kuku Anda dengan perawatan premium dan nail art eksklusif.",
-    type: "website",
+    "Percantik kuku Anda dengan perawatan premium dan nail art eksklusif di Nanails Art. Manicure, gel polish, nail extension, dan nail art design terbaik di Majalaya.",
+  icons: {
+    icon: "/images/logo.png",
   },
 };
 
@@ -40,7 +29,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="id"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-gradient-to-b from-[#fdf8f5] via-[#faf4ef] to-[#f7efe8]"
+      className="relative overflow-hidden bg-linear-to-b from-background via-[#faf4ef] to-[#f7efe8]"
     >
       {/* Decorative blurred circles */}
       <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#f5d5c8]/40 blur-3xl" />
@@ -19,12 +19,27 @@ export function Hero() {
             PREMIUM NAIL SALON
           </div>
 
-          <h1 className="font-serif text-4xl font-bold leading-[1.1] tracking-tight text-[#3d2c2c] sm:text-5xl md:text-[3.3rem] lg:text-6xl xl:text-7xl">
+          <h1 className="font-serif text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-[3.3rem] lg:text-6xl xl:text-7xl">
             Percantik Kuku Anda,{" "}
-            <span className="bg-gradient-to-r from-[#c4917b] to-[#d4a592] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#c4917b] to-[#d4a592] bg-clip-text text-transparent">
               Tingkatkan Gaya Anda.
             </span>
           </h1>
+
+          {/* Hero image between title and description on mobile */}
+          <div className="relative mt-8 mb-4 block w-full md:hidden">
+            <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-4xl shadow-2xl shadow-[#c4917b]/20">
+              <Image
+                src="/images/image.png"
+                alt="Nanails Art - Salon nail art premium"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
+            </div>
+          </div>
 
           <p className="mt-5 max-w-md text-base leading-relaxed text-[#7a6960] sm:text-lg md:mt-6 md:max-w-lg">
             Rasakan pengalaman perawatan kuku premium dan nail art eksklusif yang
@@ -35,7 +50,7 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:mt-10">
             <a
-              href="https://wa.me/6281234567890?text=Halo%20Nanails%20Art%2C%20saya%20ingin%20reservasi"
+              href="https://wa.me/6289678730504?text=Halo%20Nanails%20Art%2C%20saya%20ingin%20reservasi"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-full bg-[#c4917b] px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-[#c4917b]/25 transition-all duration-300 hover:bg-[#b07d68] hover:shadow-2xl hover:shadow-[#c4917b]/30 hover:-translate-y-0.5 active:translate-y-0 sm:text-base"
@@ -90,40 +105,17 @@ export function Hero() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative flex-1">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] shadow-2xl shadow-[#c4917b]/20 md:max-w-lg lg:max-w-xl">
+        <div className="relative hidden flex-1 md:block">
+          <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-4xl shadow-2xl shadow-[#c4917b]/20 md:max-w-lg lg:max-w-xl">
             <Image
-              src="/images/hero-banner.jpg"
+              src="/images/image.png"
               alt="Nanails Art - Salon nail art premium"
               fill
-              priority
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#3d2c2c]/30 via-transparent to-transparent" />
-          </div>
-
-          {/* Floating card */}
-          <div className="absolute -bottom-4 -left-4 rounded-2xl border border-white/60 bg-white/80 px-5 py-4 shadow-xl backdrop-blur-lg sm:-bottom-6 sm:-left-6">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c4917b]/15 text-lg">
-                💅
-              </div>
-              <div>
-                <p className="text-xs font-medium text-[#a09088]">
-                  Hasil Terbaru
-                </p>
-                <p className="text-sm font-bold text-[#3d2c2c]">
-                  Floral Nail Art
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Floating badge top-right */}
-          <div className="absolute -right-2 top-6 flex h-16 w-16 items-center justify-center rounded-full border border-white/60 bg-white/80 text-2xl shadow-lg backdrop-blur-lg sm:-right-4 sm:top-8 sm:h-20 sm:w-20 sm:text-3xl">
-            ✨
+            <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
           </div>
         </div>
       </div>

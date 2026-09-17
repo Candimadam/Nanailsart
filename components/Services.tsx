@@ -8,12 +8,12 @@ function ServiceCard({ service }: { service: ServiceItem }) {
       <div className="absolute -right-8 -top-8 h-16 w-16 rounded-full bg-[#fdf2ec] transition-all duration-500 group-hover:h-24 group-hover:w-24 group-hover:bg-[#f5e0d5]" />
 
       {/* Icon */}
-      <div className="relative mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#fdf2ec] to-[#f7e6dc] text-2xl shadow-sm transition-transform duration-300 group-hover:scale-110">
+      <div className="relative mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-[#fdf2ec] to-[#f7e6dc] text-2xl shadow-sm transition-transform duration-300 group-hover:scale-110">
         {service.icon}
       </div>
 
       {/* Content */}
-      <h3 className="relative font-serif text-xl font-bold text-[#3d2c2c] transition-colors group-hover:text-[#c4917b] lg:text-[1.35rem]">
+      <h3 className="relative font-serif text-xl font-bold text-foreground transition-colors group-hover:text-[#c4917b] lg:text-[1.35rem]">
         {service.title}
       </h3>
       <p className="relative mt-2.5 text-sm leading-relaxed text-[#7a6960] lg:text-[0.925rem]">
@@ -25,7 +25,15 @@ function ServiceCard({ service }: { service: ServiceItem }) {
         <span className="rounded-full bg-[#fdf2ec] px-4 py-2 text-sm font-bold text-[#c4917b]">
           {service.price}
         </span>
-        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e8ddd5] text-[#c4917b] opacity-0 transition-all duration-300 group-hover:opacity-100">
+        <a
+          href={`https://wa.me/6289678730504?text=${encodeURIComponent(
+            `Halo Nanails Art, saya ingin reservasi layanan ${service.title}.`,
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Reservasi ${service.title} melalui WhatsApp`}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e8ddd5] text-[#c4917b] opacity-0 transition-all duration-300 hover:border-[#c4917b] hover:bg-[#c4917b] hover:text-white group-hover:opacity-100"
+        >
           <svg
             className="h-4 w-4"
             fill="none"
@@ -39,7 +47,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
               d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
             />
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   );
@@ -51,12 +59,12 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#e8ddd5] bg-[#fdf8f5] px-4 py-1.5 text-xs font-medium tracking-wider text-[#c4917b]">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#e8ddd5] bg-background px-4 py-1.5 text-xs font-medium tracking-wider text-[#c4917b]">
             💅 LAYANAN KAMI
           </div>
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-[#3d2c2c] sm:text-4xl lg:text-5xl">
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Layanan{" "}
-            <span className="bg-gradient-to-r from-[#c4917b] to-[#d4a592] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#c4917b] to-[#d4a592] bg-clip-text text-transparent">
               &amp; Harga
             </span>
           </h2>

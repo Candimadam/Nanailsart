@@ -2,7 +2,7 @@ export function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer className="border-t border-[#f0e4da]/60 bg-[#3d2c2c]">
+    <footer className="border-t border-[#f0e4da]/60 bg-foreground">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           {/* Brand */}
@@ -42,7 +42,7 @@ export function Footer() {
                   <span className="font-medium text-[#e8ddd5]">
                     Sabtu – Minggu:
                   </span>{" "}
-                  10.00 – 20.00
+                  10.00 – 18.00
                 </span>
               </li>
             </ul>
@@ -78,7 +78,7 @@ export function Footer() {
             &copy; {currentYear} Nanails Art. All rights reserved.
           </p>
           <p className="text-xs text-[#8a7b72]">
-            Dibuat oleh Candimadam
+            Pemilik dan pengelola: <span className="font-medium text-[#d4a592]">Ratna Sintia Dewi</span>
           </p>
         </div>
       </div>

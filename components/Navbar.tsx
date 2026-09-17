@@ -15,12 +15,12 @@ export function Navbar() {
   return (
     <header
       id="navbar"
-      className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/80 border-b border-[#f0e4da]/60 transition-all duration-300"
+      className="sticky top-0 z-[100] w-full border-b border-[#f0e4da]/60 bg-white/80 backdrop-blur-xl transition-all duration-300"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
         {/* Logo */}
         <a href="#" className="group flex items-center gap-2">
-          <span className="text-2xl sm:text-[1.7rem] font-serif font-bold tracking-tight text-[#3d2c2c] transition-colors group-hover:text-[#c4917b]">
+          <span className="text-2xl sm:text-[1.7rem] font-serif font-bold tracking-tight text-foreground transition-colors group-hover:text-[#c4917b]">
             Nanails{" "}
             <span className="font-light italic text-[#c4917b]">Art</span>
           </span>
@@ -41,7 +41,7 @@ export function Navbar() {
           {/* Social Icons */}
           <div className="flex items-center gap-3 ml-2">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/nanailsart02"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -56,7 +56,7 @@ export function Navbar() {
               </svg>
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@nanailsart02"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
@@ -74,7 +74,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6289678730504"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 rounded-full bg-[#c4917b] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#c4917b]/25 transition-all duration-300 hover:bg-[#b07d68] hover:shadow-lg hover:shadow-[#c4917b]/30 hover:-translate-y-0.5 active:translate-y-0"
@@ -87,41 +87,37 @@ export function Navbar() {
         <button
           id="mobile-menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
-          className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="relative z-[110] flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
           <span
-            className={`h-[2px] w-6 rounded-full bg-[#3d2c2c] transition-all duration-300 ${
-              isOpen ? "translate-y-[5px] rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "translate-y-1.25 rotate-45" : ""
+              }`}
           />
           <span
-            className={`h-[2px] w-6 rounded-full bg-[#3d2c2c] transition-all duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
+            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`h-[2px] w-6 rounded-full bg-[#3d2c2c] transition-all duration-300 ${
-              isOpen ? "-translate-y-[5px] -rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 rounded-full bg-foreground transition-all duration-300 ${isOpen ? "-translate-y-1.25 -rotate-45" : ""
+              }`}
           />
         </button>
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-white/95 backdrop-blur-xl transition-all duration-500 md:hidden ${
-            isOpen
-              ? "pointer-events-auto opacity-100"
-              : "pointer-events-none opacity-0"
-          }`}
+          className={`fixed inset-0 z-[100] flex min-h-dvh flex-col items-center justify-center gap-8 overflow-y-auto bg-[#fdf8f5] transition-all duration-500 md:hidden ${isOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
+            }`}
         >
           {navLinks.map((link, index) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-2xl font-serif font-medium text-[#3d2c2c] transition-all duration-300 hover:text-[#c4917b]"
+              className="text-2xl font-serif font-medium text-foreground transition-all duration-300 hover:text-[#c4917b]"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               {link.label}
@@ -130,7 +126,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4 mt-4">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/nanailsart02"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -141,7 +137,7 @@ export function Navbar() {
               </svg>
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@nanailsart02"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
@@ -154,7 +150,7 @@ export function Navbar() {
           </div>
 
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6289678730504"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
