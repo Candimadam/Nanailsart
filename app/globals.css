@@ -18,7 +18,12 @@ html {
 }
 
 body {
-  background: var(--color-background);
+  background-color: var(--color-background);
+  background-image: url("/images/background.png");
+  background-position: center top;
+  background-size: 618px auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
   color: var(--color-foreground);
   font-family: var(--font-sans);
 }

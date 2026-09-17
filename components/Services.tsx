@@ -55,7 +55,7 @@ function ServiceCard({ service }: { service: ServiceItem }) {
 
 export function Services() {
   return (
-    <section id="layanan" className="bg-white py-20 sm:py-24 md:py-28 lg:py-32">
+    <section id="layanan" className="bg-white/80 py-20 backdrop-blur-[2px] sm:py-24 md:py-28 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">

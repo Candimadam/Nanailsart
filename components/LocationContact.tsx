@@ -26,7 +26,13 @@ export function LocationContact() {
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Address */}
-            <div className="group flex gap-4 rounded-2xl border border-[#f0e4da]/80 bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#c4917b]/20 hover:shadow-md sm:p-6">
+            <a
+              href="https://maps.app.goo.gl/a7DAWDHWB1LuZJmJ9"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Buka alamat Nanails Art di Google Maps"
+              className="group flex gap-4 rounded-2xl border border-[#f0e4da]/80 bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#c4917b]/20 hover:shadow-md sm:p-6"
+            >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-[#fdf2ec] to-[#f7e6dc] text-xl transition-transform duration-300 group-hover:scale-110">
                 📍
               </div>
@@ -34,11 +40,11 @@ export function LocationContact() {
                 <h3 className="font-serif text-base font-bold text-foreground sm:text-lg">
                   Alamat
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-[#7a6960]">
+                <p className="mt-1 text-sm leading-relaxed text-[#7a6960] transition-colors group-hover:text-[#c4917b]">
                   Kp.leuwinanggung rt03 rw05 kecamatan ibun, Tangulun, Majalaya, Kabupaten Bandung, Jawa Barat 40384
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* WhatsApp */}
             <a
@@ -111,6 +117,20 @@ export function LocationContact() {
                   <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46 6.28 6.28 0 001.86-4.49V9.38a8.18 8.18 0 004.72 1.5V7.43a4.85 4.85 0 01-1-.74z" />
                 </svg>
               </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-12 w-12 items-center justify-center rounded-xl border border-[#f0e4da] bg-white shadow-sm transition-all duration-300 hover:border-[#c4917b]/30 hover:shadow-md"
+              >
+                <svg
+                  className="h-5 w-5 text-[#5a4a42] transition-colors group-hover:text-[#c4917b]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -119,7 +139,7 @@ export function LocationContact() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.604578773397!2d107.7602823737131!3d-7.055662069140212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1b5dd301b21%3A0x1d5a4fe293017ba9!2sNanails%20Art!5e0!3m2!1sid!2sid!4v1789638062917!5m2!1sid!2sid"
               title="Lokasi Nanails Art di Google Maps"
-              className="h-90 w-full md:h-full"
+              className="h-90 w-full md:h-115"
               allowFullScreen
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"

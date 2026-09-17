@@ -1,4 +1,89 @@
-import Image from "next/image";
+"use client";
+
+import { useRef, useState } from "react";
+
+function HeroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      void video.play();
+      setIsPlaying(true);
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
+  return (
+    <>
+      <video
+        ref={videoRef}
+        className="h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/image.png"
+        aria-label="Video karya nail art Nanails Art"
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onVolumeChange={(event) => setIsMuted(event.currentTarget.muted)}
+      >
+        <source src="/Video.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={togglePlayback}
+          aria-label={isPlaying ? "Pause video" : "Putar video"}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-black/35 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-black/55"
+        >
+          {isPlaying ? (
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
+            </svg>
+          ) : (
+            <svg className="ml-0.5 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </button>
+
+        <button
+          type="button"
+          onClick={toggleMute}
+          aria-label={isMuted ? "Nyalakan suara video" : "Matikan suara video"}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-black/35 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-black/55"
+        >
+          {isMuted ? (
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M11 5L6 9H3v6h3l5 4V5zM19 9l-4 6m0-6l4 6" />
+            </svg>
+          ) : (
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M11 5L6 9H3v6h3l5 4V5zM15.5 8.5a5 5 0 010 7M18 6a8.5 8.5 0 010 12" />
+            </svg>
+          )}
+        </button>
+      </div>
+    </>
+  );
+}
 
 export function Hero() {
   return (
@@ -10,7 +95,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-[#f5d5c8]/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-10 h-64 w-64 rounded-full bg-[#e8c4b8]/30 blur-3xl" />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-5 pb-16 pt-20 sm:px-8 md:flex-row md:gap-12 md:pb-24 md:pt-28 lg:gap-20 lg:px-10">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-5 pb-16 pt-10 sm:px-8 md:flex-row md:gap-12 md:pb-24 md:pt-10 lg:gap-20 lg:px-10">
         {/* Text Content */}
         <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
           {/* Badge */}
@@ -29,15 +114,8 @@ export function Hero() {
           {/* Hero image between title and description on mobile */}
           <div className="relative mt-8 mb-4 block w-full md:hidden">
             <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-4xl shadow-2xl shadow-[#c4917b]/20">
-              <Image
-                src="/images/image.png"
-                alt="Nanails Art - Salon nail art premium"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
+              <HeroVideo />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
             </div>
           </div>
 
@@ -107,15 +185,9 @@ export function Hero() {
         {/* Hero Image */}
         <div className="relative hidden flex-1 md:block">
           <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-4xl shadow-2xl shadow-[#c4917b]/20 md:max-w-lg lg:max-w-xl">
-            <Image
-              src="/images/image.png"
-              alt="Nanails Art - Salon nail art premium"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            <HeroVideo />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-foreground/30 via-transparent to-transparent" />
           </div>
         </div>
       </div>
