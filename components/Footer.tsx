@@ -31,7 +31,7 @@ export function Footer() {
                   <span className="font-medium text-[#e8ddd5]">
                     Senin – Jumat:
                   </span>{" "}
-                  10.00 – 20.00
+                  10.00 – 21.00
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm text-[#b8a99e]">
@@ -42,7 +42,7 @@ export function Footer() {
                   <span className="font-medium text-[#e8ddd5]">
                     Sabtu – Minggu:
                   </span>{" "}
-                  10.00 – 18.00
+                  10.00 – 20.00
                 </span>
               </li>
             </ul>
@@ -78,7 +78,7 @@ export function Footer() {
             &copy; {currentYear} Nanails Art. All rights reserved.
           </p>
           <p className="text-xs text-[#8a7b72]">
-            Pemilik dan pengelola: <span className="font-medium text-[#d4a592]">Ratna Sintia Dewi</span>
+            Pemilik dan pengelola: <span className="font-medium text-[#d4a592]">Ratna Sintya Dewi</span>
           </p>
         </div>
       </div>

@@ -3,50 +3,34 @@ import { ServiceItem } from "@/types";
 export const services: ServiceItem[] = [
   {
     id: 1,
-    title: "Manicure",
+    title: "Treatment Callus",
     description:
-      "Perawatan kuku tangan lengkap meliputi pembentukan, kutikula, dan poles untuk tampilan kuku yang rapi dan sehat.",
+      "Perawatan untuk menghilangkan kapalan (kulit tebal dan keras) dengan rendam aromaterapi, scrub, masker, dan pijat relaksasi untuk kaki menjadi halus.",
     price: "Mulai dari Rp 50.000",
-    icon: "💅",
-  },
-  {
-    id: 2,
-    title: "Gel Polish",
-    description:
-      "Cat kuku gel tahan lama hingga 3 minggu dengan kilau sempurna. Tersedia ratusan pilihan warna terkini.",
-    price: "Mulai dari Rp 85.000",
-    icon: "✨",
-  },
-  {
-    id: 3,
-    title: "Nail Extension",
-    description:
-      "Perpanjangan kuku dengan teknik acrylic atau polygel untuk bentuk kuku impian Anda yang kokoh dan natural.",
-    price: "Mulai dari Rp 150.000",
-    icon: "💎",
-  },
-  {
-    id: 4,
-    title: "Nail Art Design",
-    description:
-      "Desain nail art custom sesuai keinginan Anda, dari motif minimalis hingga 3D art yang memukau.",
-    price: "Mulai dari Rp 120.000",
     icon: "🎨",
   },
   {
-    id: 5,
-    title: "Pedicure Spa",
+    id: 2,
+    title: "Phyto Keratin Lashlift",
     description:
-      "Perawatan kaki mewah dengan rendam aromaterapi, scrub, masker, dan pijat relaksasi untuk kaki yang halus.",
-    price: "Mulai dari Rp 75.000",
+      "Melentikkan dan mengangkat bulu mata alami sehingga tampak lebih panjang, bervolume,dan terkesan lentik secara permanen.",
+    price: "Mulai dari Rp 85.000",
     icon: "🌸",
   },
   {
-    id: 6,
-    title: "Nail Removal",
+    id: 3,
+    title: "Eyelash Extension",
     description:
-      "Pelepasan gel polish atau nail extension secara aman dan profesional tanpa merusak kuku asli Anda.",
+      "Proses menyambung helai bulu mata buatan ke bulu mata asli untuk memberikan tampilan lebih panjang dan tebal.",
     price: "Mulai dari Rp 35.000",
     icon: "🧴",
+  },
+  {
+    id: 4,
+    title: "Extension",
+    description:
+      "Perpanjangan kuku dengan teknik softip gel atau gel extension untuk membentuk kuku impian kamu yang kokoh dan natural free rusian Manicure plus cuci masker.",
+    price: "Mulai dari Rp 150.000",
+    icon: "💅",
   },
 ];

@@ -95,7 +95,7 @@ export function Gallery() {
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#e8ddd5] bg-white/70 px-4 py-1.5 text-xs font-medium tracking-wider text-[#c4917b]">
-            🎨 PORTOFOLIO
+            🎨 CONTOH FOTO
           </div>
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Galeri{" "}

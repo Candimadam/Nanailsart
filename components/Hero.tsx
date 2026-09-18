@@ -167,12 +167,12 @@ export function Hero() {
           <div className="mt-10 flex items-center gap-6 text-xs text-[#a09088] md:mt-12">
             <div className="flex items-center gap-1.5">
               <span className="text-base">⭐</span>
-              <span className="font-medium">4.9/5 Rating</span>
+              <span className="font-medium">5,0/5,0 Rating</span>
             </div>
             <div className="h-4 w-px bg-[#d4c4ba]" />
             <div className="flex items-center gap-1.5">
               <span className="text-base">💕</span>
-              <span className="font-medium">2000+ Klien</span>
+              <span className="font-medium">250+ Klien</span>
             </div>
             <div className="hidden h-4 w-px bg-[#d4c4ba] sm:block" />
             <div className="hidden items-center gap-1.5 sm:flex">
