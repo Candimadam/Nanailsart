@@ -3,9 +3,9 @@ import { ServiceItem } from "@/types";
 export const services: ServiceItem[] = [
   {
     id: 1,
-    title: "Nail Art",
+    title: "Nails Art",
     description:
-      "Free russian Manicure plus cuci masker dengan tampilan berkilau sempurna, tersedia ratusan pilihan warna terkini. Ini yg gel polish.",
+      "Free russian Manicure plus cuci masker dengan tampilan berkilau sempurna, tersedia ratusan pilihan warna terkini.",
     image: "/images/art.png",
   },
   {
