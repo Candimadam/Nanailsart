@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { services } from "@/data/services";
 import type { ServiceItem } from "@/types";
 
@@ -7,9 +8,15 @@ function ServiceCard({ service }: { service: ServiceItem }) {
       {/* Decorative corner accent */}
       <div className="absolute -right-8 -top-8 h-16 w-16 rounded-full bg-[#fdf2ec] transition-all duration-500 group-hover:h-24 group-hover:w-24 group-hover:bg-[#f5e0d5]" />
 
-      {/* Icon */}
-      <div className="relative mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-[#fdf2ec] to-[#f7e6dc] text-2xl shadow-sm transition-transform duration-300 group-hover:scale-110">
-        {service.icon}
+      {/* Service image */}
+      <div className="relative mb-5 aspect-4/5 w-full overflow-hidden rounded-2xl bg-[#fdf2ec] shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
+        <Image
+          src={service.image}
+          alt={`Foto layanan ${service.title}`}
+          fill
+          className="object-contain"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 30vw"
+        />
       </div>
 
       {/* Content */}
@@ -20,11 +27,8 @@ function ServiceCard({ service }: { service: ServiceItem }) {
         {service.description}
       </p>
 
-      {/* Price */}
-      <div className="relative mt-5 flex items-center justify-between">
-        <span className="rounded-full bg-[#fdf2ec] px-4 py-2 text-sm font-bold text-[#c4917b]">
-          {service.price}
-        </span>
+      {/* Reservation link */}
+      <div className="relative mt-6 flex justify-end">
         <a
           href={`https://wa.me/6289678730504?text=${encodeURIComponent(
             `Halo Nanails Art, saya ingin reservasi layanan ${service.title}.`,
@@ -65,12 +69,12 @@ export function Services() {
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Layanan{" "}
             <span className="bg-linear-to-r from-[#c4917b] to-[#d4a592] bg-clip-text text-transparent">
-              &amp; Harga
+              Yang Tersedia
             </span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[#7a6960] sm:text-lg">
-            Pilihan perawatan kuku terlengkap dengan harga terjangkau, dikerjakan
-            oleh nail artist berpengalaman.
+            Pilihan perawatan kuku terlengkap yang dikerjakan oleh nail artist
+            berpengalaman.
           </p>
         </div>
 

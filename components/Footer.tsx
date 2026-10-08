@@ -42,7 +42,7 @@ export function Footer() {
                   <span className="font-medium text-[#e8ddd5]">
                     Sabtu – Minggu:
                   </span>{" "}
-                  10.00 – 20.00
+                  10.00 – 21.00
                 </span>
               </li>
             </ul>
@@ -57,6 +57,7 @@ export function Footer() {
               {[
                 { label: "Layanan", href: "#layanan" },
                 { label: "Galeri", href: "#galeri" },
+                { label: "Review", href: "#review" },
                 { label: "Kontak", href: "#kontak" },
               ].map((link) => (
                 <li key={link.href}>

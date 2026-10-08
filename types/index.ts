@@ -2,8 +2,7 @@ export interface ServiceItem {
   id: number;
   title: string;
   description: string;
-  price: string;
-  icon: string;
+  image: string;
 }
 
 export interface GalleryItem {
